@@ -20,8 +20,10 @@ int main(int argc, char **argv)
 
 	printContents<int>(intVector, "Vector Contents");
 
-	std::sort(intVector.begin(), intVector.end(), sortDescending);
+	std::random_shuffle(intVector.begin(), intVector.end());
+	printContents<int>(intVector, "Random Shuffle Vector Contents");
 
+	std::sort(intVector.begin(), intVector.end(), sortDescending);
 	printContents<int>(intVector, "Sorted Vector Contents");
 
 	return 0;
